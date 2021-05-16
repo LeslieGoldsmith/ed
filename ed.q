@@ -31,7 +31,7 @@
 \d .ed
 
 ED:$["w"=first string .z.o;"\"C:\\Program Files\\Notepad++\\notepad++.exe\" -multiInst -nosession -notabbar";"Editor_not_specified"] / External editor invocation
-TABS:8
+TABS:8 / Tab width for <qed>; must agree with OS UI window interface
 POW:1 10 100 1000 10000
 
 enl:enlist
