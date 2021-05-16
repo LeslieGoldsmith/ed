@@ -18,8 +18,9 @@ Loading the editor file `ed.q` aliases the global names `ed` and `qed` to `.ws.e
 
 ## The `ed` Editor
 
-Define the variable `.ed.ED` to refer to the external editor of choice. Editing occurs entirely
-within the context of the chosen editor.
+Define the variable `.ed.ED` to refer to the external editor of choice.  Editing occurs entirely
+within the context of the chosen editor. By default, under Windows `ed` uses Notepad++; there is
+no default editor for Linux.
 
 To keep changes made in the external editor, save the function in the editor and
 exit back to Q.  If `ed` cannot define the function in Q (for example, if it has an
@@ -260,6 +261,13 @@ q)\ts build 5000000
 
 The modified version exhibits much better performance characteristics, with this simple change giving an
 improvement of nearly 15 times.
+
+# Configuration
+
+The variable `.ed.ED` controls the OS editor invoked by `ed`. By default, under Windows `ed` uses Notepad++; there is
+no default editor for Linux.
+
+The variable `.ed.TABS` controls with width of a tab stop in `qed`. By default, tabs are set to 8.
 
 # Acknowledgement
 
