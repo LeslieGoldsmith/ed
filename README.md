@@ -268,7 +268,8 @@ improvement of nearly 15 times.
 The variable `.ed.ED` controls the OS editor invoked by `ed`. By default, under Windows `ed` uses Notepad++; there is
 no default editor for Linux.
 
-The variable `.ed.TABS` controls with width of a tab stop in `qed`. By default, tabs are set to 8.
+The variable `.ed.TABS` controls the width of a tab stop in `qed`. The value of this setting must agree with the OS UI
+window interface that you are using. By default, tabs are set to 8.
 
 # Acknowledgement
 
