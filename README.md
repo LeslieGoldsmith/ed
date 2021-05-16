@@ -193,7 +193,8 @@ build 2    usym:neg[s]?`4;                1     00:00.000 00:00.000 0.11%
 build 3    ps:1+s?99f;                    1     00:00.000 00:00.000 0.00%
 ```
 
-The problem is line 4. Let's look a little closer by introducing a break point and experimenting in the context of the suspended function.
+The problem is line 4, which is consuming over 95% of the time. Let's look a little closer by introducing a breakpoint
+and experimenting in the context of the suspended function.
 
 ```
 q).prof.unprof`
@@ -221,7 +222,7 @@ q))\ts {[usym;ps;s] ps[usym?s]+rand 1f}[usym;ps] each sym
 3451 180663968
 ```
 
-The problem is the repeated look-ups of each nonunique symbol in the unique symbol list. This is simple to improve, by
+We can see that the problem is the repeated look-ups of each nonunique symbol in the unique symbol list. This is simple to improve, by
 doing the look-up once.
 
 ```
