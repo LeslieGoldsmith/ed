@@ -465,6 +465,7 @@ existing function of the same name and the original version is left unchanged.
 Globals (ed):
 
 .ed.ED   - External editor command line prefix (name to edit is appended); assign to change
+.ed.TABS - Tab width for <qed>; assign to change in agreement with OS UI window interface
 
 Globals (qed):
 
